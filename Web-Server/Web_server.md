@@ -18,7 +18,7 @@
 
 - [Backup file](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#backup-file)
 
-- [HTTP - Directory indexing]()
+- [HTTP - Directory indexing](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---directory-indexing)
 
 ### HTML - Source code
 
@@ -288,33 +288,33 @@ Tìm được `username="ch11"` và `password="OCCY9AcNm1tj"`. Thử đăng nh�
 
 ### HTTP - Directory indexing
 
-![img](52)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image52.png?raw=true)
 
 Start the challenge: 
 
-![img](53)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image53.png?raw=true)
 
 Xem source page:
 
-![img](54)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image54.png?raw=true)
 
 Tìm được URL `admin/pass.html`. Thử truy cập qua URL:
 
-![img](55)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image55.png?raw=true)
 
 Thử truy cập `pass.html`:
 
-![img](58)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image58.png?raw=true)
 
 Không thu được gì.
 
 Thử truy cập `/backup/`:
 
-![img](56)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image56.png?raw=true)
 
 Thử truy cập `admin.txt`:
 
-![img](57)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image57.png?raw=true)
 
 **Password: LINUX**
 

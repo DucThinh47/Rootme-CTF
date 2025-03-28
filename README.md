@@ -24,4 +24,4 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 
 - [Backup file](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#backup-file)
 
-- [HTTP - Directory indexing]()
+- [HTTP - Directory indexing](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---directory-indexing)
