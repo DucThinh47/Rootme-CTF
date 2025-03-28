@@ -20,6 +20,8 @@
 
 - [HTTP - Directory indexing](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---directory-indexing)
 
+- [HTTP - Headers]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -317,6 +319,30 @@ Thử truy cập `admin.txt`:
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image57.png?raw=true)
 
 **Password: LINUX**
+
+### HTTP - Headers
+
+![img](59)
+
+Start the challenge:
+
+![img](60)
+
+Xem source page: 
+
+![img](61)
+
+Không thu được gì.
+
+Dựa vào mô tả thử thách: "Content is not the only part of an HTTP response!", thử xem request và response khi start the challenge:
+
+![img](62)
+
+Trong response có header `Header-RootMe-Admin` đang có giá trị `none`, thử thêm header này vào request `Header-RootMe-Admin: true`:
+
+![img](63)
+
+**Password: HeadersMayBeUseful**
 
 
 
