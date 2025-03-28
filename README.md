@@ -20,4 +20,4 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 
 - [PHP - Command injection](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#php---command-injection)
 
-- [API - Broken Access]()
+- [API - Broken Access](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#api---broken-access)

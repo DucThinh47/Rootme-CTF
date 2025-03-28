@@ -14,7 +14,7 @@
 
 - [PHP - Command injection](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#php---command-injection)
 
-- [API - Broken Access]()
+- [API - Broken Access](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#api---broken-access)
 
 ### HTML - Source code
 
@@ -174,11 +174,11 @@ Qua nội dung đoạn mã, có thể flag nằm trong file `.passwd`, thử nh�
 
 ### API - Broken Access
 
-![img](29)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image29.png?raw=true)
 
 Start the challenge: 
 
-![img](30)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image30.png?raw=true)
 
 Dựa vào mô tả thử thách "Your friend has set up a platform where you can register and post a private note. Everything is based on an API. Before setting up the Front-End, he asked you to check that everything was secure.", website này được dùng để user mới đăng ký, sau đó họ có thể tạo và xem ghi chú của mình một cách riêng tư, tất cả hoạt động thông qua API.
 
@@ -186,55 +186,55 @@ Một số API có thể thấy là tạo user, đăng nhập, xem thông tin us
 
 Thử sử dụng `/signup` API để tạo 1 user mới: 
 
-![img](31)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image31.png?raw=true)
 
-![img](32)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image32.png?raw=true)
 
 Response trông như sau: 
 
-![img](33)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image33.png?raw=true)
 
 -> Có thể thấy request URL, request method, request params nhưng chưa thu được thông tin gì có thể khai thác. 
 
 Tiếp tục thử `/login` API, sử dụng `username:user1` và `password:user1`:
 
-![img](34)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image34.png?raw=true)
 
 Response trông như sau: 
 
-![img](35)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image35.png?raw=true)
 
 -> Cũng chưa thu được gì nhiều.
 
 Tiếp tục thử API xem thông tin user `/user`:
 
-![img](36)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image36.png?raw=true)
 
 Cần nhập user id, vấn đề là không biết id của user vừa tạo là gì. Thử nhập id là 1, 2, 3 thì response cũng đều hiển thị như sau: 
 
-![img](37)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image37.png?raw=true)
 
 -> ID của user vừa tạo là 6 và Request URL là `http://api-broken-access.challenge01.root-me.org/api/user`, thử truy cập URL `http://api-broken-access.challenge01.root-me.org/api/user/6` qua browser:
 
-![img](38)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image38.png?raw=true)
 
 Ý tưởng có thể khai thác là xem thông tin của user `admin`, cần tìm user_id của `admin`. 
 
 Request yêu cầu xem thông tin user trông như sau: 
 
-![img](39)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image39.png?raw=true)
 
 Send request tới Intruder và Brute-force user_id: 
 
-![img](40)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image40.png?raw=true)
 
 Payload option:
 
-![img](41)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image41.png?raw=true)
 
 Start attack và tìm ra thông tin của `admin`:
 
-![img](42)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image42.png?raw=true)
 
 **Password: RM{E4sy_1d0r_0n_API}**
 
