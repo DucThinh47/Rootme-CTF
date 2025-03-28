@@ -18,6 +18,8 @@
 
 - [Backup file](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#backup-file)
 
+- [HTTP - Directory indexing]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -283,6 +285,39 @@ Tìm được `username="ch11"` và `password="OCCY9AcNm1tj"`. Thử đăng nh�
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image51.png?raw=true)
 
 **Password: OCCY9AcNm1tj**
+
+### HTTP - Directory indexing
+
+![img](52)
+
+Start the challenge: 
+
+![img](53)
+
+Xem source page:
+
+![img](54)
+
+Tìm được URL `admin/pass.html`. Thử truy cập qua URL:
+
+![img](55)
+
+Thử truy cập `pass.html`:
+
+![img](58)
+
+Không thu được gì.
+
+Thử truy cập `/backup/`:
+
+![img](56)
+
+Thử truy cập `admin.txt`:
+
+![img](57)
+
+**Password: LINUX**
+
 
 
 

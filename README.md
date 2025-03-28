@@ -23,3 +23,5 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 - [API - Broken Access](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#api---broken-access)
 
 - [Backup file](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#backup-file)
+
+- [HTTP - Directory indexing]()
