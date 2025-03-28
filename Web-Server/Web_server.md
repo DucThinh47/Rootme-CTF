@@ -10,6 +10,8 @@
 
 - [HTTP - User-agent](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---user-agent)
 
+- [Weak password]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -97,6 +99,25 @@ Dựa vào thông tin website thử thách đưa ra: "Wrong user-agent: you are 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image15.png?raw=true)
 
 **Password: rr$Li9%L34qd1AAe27**
+
+### Weak password
+
+![img](16)
+
+Start the challenge: 
+
+![img](17)
+
+Thử nhập `username:admin` và `password:admin`:
+
+![img](18)
+
+**Password: admin**
+
+
+
+
+
 
 
 
