@@ -4,7 +4,7 @@
 
 - [HTML - Source code](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#html---source-code)
 
-- [HTTP - IP restriction bypass]()
+- [HTTP - IP restriction bypass](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---ip-restriction-bypass)
 
 ### HTML - Source code
 
@@ -22,15 +22,15 @@ Xem source page:
 
 ### HTTP - IP restriction bypass
 
-![img](3)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image3.png?raw=true)
 
 Start the challenge: 
 
-![img](4)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image4.png?raw=true)
 
 Xem source page: 
 
-![img](5)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image5.png?raw=true)
 
 -> Không tìm được gì. 
 
@@ -42,11 +42,11 @@ Dựa vào thông tin được cung cấp trên website của thử thách "You 
 
 Request login trông như sau: 
 
-![img](6)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image6.png?raw=true)
 
 Thử thêm header `X-Forwarded-For: 192.168.0.1` và send request:
 
-![img](7)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image7.png?raw=true)
 
 -> Khi thêm `X-Forwarded-For: 192.168.0.1`, server có thể nghĩ rằng request đến từ mạng nội bộ và cấp quyền truy cập đặc biệt. 
 

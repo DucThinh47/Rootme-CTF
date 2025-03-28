@@ -10,4 +10,4 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 
 - [HTML - Source code](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#html---source-code)
 
-- [HTTP - IP restriction bypass]()
+- [HTTP - IP restriction bypass](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---ip-restriction-bypass)
