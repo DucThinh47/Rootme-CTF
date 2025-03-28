@@ -5,9 +5,7 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 ## Content
 
 - [Web - Server](https://github.com/DucThinh47/Rootme-CTF#web---server)
-    
-    - [HTML - Source code]()
 
 ### Web - Server
 
-- [HTML - Source code]()
+- [HTML - Source code](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#html---source-code)
