@@ -6,7 +6,7 @@
 
 - [HTTP - IP restriction bypass](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---ip-restriction-bypass)
 
-- [HTTP - Open redirect]()
+- [HTTP - Open redirect](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---open-redirect)
 
 ### HTML - Source code
 
@@ -56,15 +56,15 @@ Thử thêm header `X-Forwarded-For: 192.168.0.1` và send request:
 
 ### HTTP - Open redirect
 
-![img](8)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image8.png?raw=true)
 
 Start the challenge:
 
-![img](9)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image9.png?raw=true)
 
 Xem source page: 
 
-![img](10)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image10.png?raw=true)
 
 Có thể thấy 3 URL dẫn đến từng domain tương ứng Facebook, Twitter, Stack, nhưng lại có một tham số `h` đằng sau, giá trị tham số này trông như đã được băm. 
 
@@ -72,7 +72,7 @@ Thử băm `https://facebook.com` sử dụng thuật toán `md5`, thu được 
 
 Theo mô tả thử thách "Find a way to make a redirection to a domain other than those showed on the web page.". Thử request đến 1 domain khác là `https://youtube.com` với giá trị băm là `e62e24467ebdddf3fe7cc0e6970f01af`:
 
-![img](11)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image11.png?raw=true)
 
 **Password: e6f8a530811d5a479812d7b82fc1a5c5**
 
