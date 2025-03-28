@@ -12,7 +12,7 @@
 
 - [Weak password](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#weak-password)
 
-- [PHP - Command injection]()
+- [PHP - Command injection](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#php---command-injection)
 
 ### HTML - Source code
 
@@ -118,41 +118,41 @@ Thử nhập `username:admin` và `password:admin`:
 
 ### PHP - Command injection
 
-![img](19)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image19.png?raw=true)
 
 Start the challenge: 
 
-![img](20)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image20.png?raw=true)
 
 Dựa vào mô tả thử thách "Find a vulnerabilty in this service and exploit it. You must manage to read index.php", thử truy cập `/index.php`:
 
-![img](21)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image21.png?raw=true)
 
 -> Không đọc được. Thử nhập `index.php` và click submit:
 
-![img](22)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image22.png?raw=true)
 
 -> Cũng không xem được. 
 
 Thử nhập `127.0.0.1`:
 
-![img](23)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image23.png?raw=true)
 
 Thử nhập `127.0.0.1&&pwd`:
 
-![img](24)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image24.png?raw=true)
 
 -> Câu lệnh `pwd` được thực thi, có thể website tồn tại lỗ hổng `Command Injection`. Thử nhập `127.0.0.1&&ls`:
 
-![img](25)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image25.png?raw=true)
 
 -> Tìm được file `index.php`, thử nhập `127.0.0.1&&ls&&cat index.php`:
 
-![img](26)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image26.png?raw=true)
 
 Xem response trong Burp Suite: 
 
-![img](27)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image27.png?raw=true)
 
 -> Nội dung `index.php`:
 
@@ -166,7 +166,7 @@ Xem response trong Burp Suite:
 
 Qua nội dung đoạn mã, có thể flag nằm trong file `.passwd`, thử nhập `127.0.0.1&&cat .passwd`:
 
-![img](28)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image28.png?raw=true)
 
 **Password: S3rv1ceP1n9Sup3rS3cure**
 
