@@ -14,6 +14,8 @@
 
 - [PHP - Command injection](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#php---command-injection)
 
+- [API - Broken Access]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -169,6 +171,79 @@ Qua nội dung đoạn mã, có thể flag nằm trong file `.passwd`, thử nh�
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image28.png?raw=true)
 
 **Password: S3rv1ceP1n9Sup3rS3cure**
+
+### API - Broken Access
+
+![img](29)
+
+Start the challenge: 
+
+![img](30)
+
+Dựa vào mô tả thử thách "Your friend has set up a platform where you can register and post a private note. Everything is based on an API. Before setting up the Front-End, he asked you to check that everything was secure.", website này được dùng để user mới đăng ký, sau đó họ có thể tạo và xem ghi chú của mình một cách riêng tư, tất cả hoạt động thông qua API.
+
+Một số API có thể thấy là tạo user, đăng nhập, xem thông tin user, tạo ghi chú. 
+
+Thử sử dụng `/signup` API để tạo 1 user mới: 
+
+![img](31)
+
+![img](32)
+
+Response trông như sau: 
+
+![img](33)
+
+-> Có thể thấy request URL, request method, request params nhưng chưa thu được thông tin gì có thể khai thác. 
+
+Tiếp tục thử `/login` API, sử dụng `username:user1` và `password:user1`:
+
+![img](34)
+
+Response trông như sau: 
+
+![img](35)
+
+-> Cũng chưa thu được gì nhiều.
+
+Tiếp tục thử API xem thông tin user `/user`:
+
+![img](36)
+
+Cần nhập user id, vấn đề là không biết id của user vừa tạo là gì. Thử nhập id là 1, 2, 3 thì response cũng đều hiển thị như sau: 
+
+![img](37)
+
+-> ID của user vừa tạo là 6 và Request URL là `http://api-broken-access.challenge01.root-me.org/api/user`, thử truy cập URL `http://api-broken-access.challenge01.root-me.org/api/user/6` qua browser:
+
+![img](38)
+
+Ý tưởng có thể khai thác là xem thông tin của user `admin`, cần tìm user_id của `admin`. 
+
+Request yêu cầu xem thông tin user trông như sau: 
+
+![img](39)
+
+Send request tới Intruder và Brute-force user_id: 
+
+![img](40)
+
+Payload option:
+
+![img](41)
+
+Start attack và tìm ra thông tin của `admin`:
+
+![img](42)
+
+**Password: RM{E4sy_1d0r_0n_API}**
+
+
+
+
+
+
+
 
 
 
