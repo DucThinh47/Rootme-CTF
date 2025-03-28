@@ -17,3 +17,5 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 - [HTTP - User-agent](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---user-agent)
 
 - [Weak password](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#weak-password)
+
+- [PHP - Command injection]()
