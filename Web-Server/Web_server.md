@@ -16,6 +16,8 @@
 
 - [API - Broken Access](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#api---broken-access)
 
+- [Backup file]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -237,6 +239,52 @@ Start attack và tìm ra thông tin của `admin`:
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image42.png?raw=true)
 
 **Password: RM{E4sy_1d0r_0n_API}**
+
+### Backup file
+
+![img](43)
+
+Start the challenge:
+
+![img](44)
+
+Xem source page: 
+
+![img](45)
+
+Không thu được thông tin gì. 
+
+Thử nhập `username:admin` và `password:admin` và click connect: 
+
+![img](46)
+
+Thử thay `username:admin` thành `username:admin'--`:
+
+![img](47)
+
+Cũng không bypass được. 
+
+Thử xem nội dung `/robots.txt`:
+
+![img](48)
+
+Không tìm thấy file. 
+
+Thử dùng `dirsearch` xem có file nào bị ẩn trên website không:
+
+![img](49)
+
+-> Tìm được file `index.php~` trả về status code 200. Thử tải file: 
+
+![img](50)
+
+Tìm được `username="ch11"` và `password="OCCY9AcNm1tj"`. Thử đăng nhập với thông tin này: 
+
+![img](51)
+
+**Password: OCCY9AcNm1tj**
+
+
 
 
 
