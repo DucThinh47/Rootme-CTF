@@ -14,4 +14,4 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 
 - [HTTP - Open redirect](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---open-redirect)
 
-- [HTTP - User-agent]()
+- [HTTP - User-agent](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---user-agent)

@@ -8,7 +8,7 @@
 
 - [HTTP - Open redirect](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---open-redirect)
 
-- [HTTP - User-agent]()
+- [HTTP - User-agent](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---user-agent)
 
 ### HTML - Source code
 
@@ -80,21 +80,21 @@ Theo mô tả thử thách "Find a way to make a redirection to a domain other t
 
 ### HTTP - User-agent
 
-![img](12)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image12.png?raw=true)
 
 Start the challenge:
 
-![img](13)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image13.png?raw=true)
 
 Request tới website trông như sau: 
 
-![img](14)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image14.png?raw=true)
 
 Dựa vào tên thử thách "User-agent", có vẻ liên quan đến `User-Agent` header, là header mô tả về browser phía client. 
 
 Dựa vào thông tin website thử thách đưa ra: "Wrong user-agent: you are not the "admin" browser!", thử thay giá trị `User-Agent` header thành `admin` và send request: 
 
-![img](15)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image15.png?raw=true)
 
 **Password: rr$Li9%L34qd1AAe27**
 
