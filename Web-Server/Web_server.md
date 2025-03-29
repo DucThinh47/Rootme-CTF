@@ -22,6 +22,8 @@
 
 - [HTTP - Headers](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---headers)
 
+- [HTTP - POST]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -344,6 +346,33 @@ Trong response có header `Header-RootMe-Admin` đang có giá trị `none`, th�
 
 **Password: HeadersMayBeUseful**
 
+### HTTP - POST
+
+![img](64)
+
+Start the challenge: 
+
+![img](65)
+
+Xem source page: 
+
+![img](66)
+
+Không thu được thông tin gì. 
+
+Click `Give a try!`:
+
+![img](67)
+
+Một giá trị score ngẫu nhiên được hiển thị. Request khi click `Give a try!` trông như sau: 
+
+![img](68)
+
+Là 1 POST request có tham số `score` có giá trị đúng bằng giá trị được hiển thị lên website. Thử thay giá trị này thành `1000000` và send request:
+
+![img](69)
+
+**Password: H7tp_h4s_N0_s3Cr37S_F0r_y0U**
 
 
 
