@@ -24,7 +24,7 @@
 
 - [HTTP - POST](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---post)
 
-- [HTTP - Improper redirect]()
+- [HTTP - Improper redirect](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---improper-redirect)
 
 ### HTML - Source code
 
@@ -378,35 +378,35 @@ Là 1 POST request có tham số `score` có giá trị đúng bằng giá trị
 
 ### HTTP - Improper redirect
 
-![img](70)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image70.png?raw=true)
 
 Start the challenge:
 
-![img](71)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image71.png?raw=true)
 
 Xem source page:
 
-![img](72)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image72.png?raw=true)
 
 Không thu được thông tin gì. 
 
 Thử nhập `username:admin` và `password:admin`, click Login:
 
-![img](73)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image73.png?raw=true)
 
 -> Authentication Failed. 
 
 Để ý request khi load trang web: 
 
-![img](74)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image74.png?raw=true)
 
 Tham số `redirect` trên URL có vẻ không dùng để làm gì, thử xóa send request:
 
-![img](75)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image75.png?raw=true)
 
 -> Response lại trang `login.php` ban đầu, thử xóa endpoint `/login.php` để ra ngoài trang chủ:
 
-![img](76)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image76.png?raw=true)
 
 **Password: ExecutionAfterRedirectIsBad**
 
