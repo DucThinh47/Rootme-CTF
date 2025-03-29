@@ -24,6 +24,8 @@
 
 - [HTTP - POST](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---post)
 
+- [HTTP - Improper redirect]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -373,6 +375,43 @@ Là 1 POST request có tham số `score` có giá trị đúng bằng giá trị
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image69.png?raw=true)
 
 **Password: H7tp_h4s_N0_s3Cr37S_F0r_y0U**
+
+### HTTP - Improper redirect
+
+![img](70)
+
+Start the challenge:
+
+![img](71)
+
+Xem source page:
+
+![img](72)
+
+Không thu được thông tin gì. 
+
+Thử nhập `username:admin` và `password:admin`, click Login:
+
+![img](73)
+
+-> Authentication Failed. 
+
+Để ý request khi load trang web: 
+
+![img](74)
+
+Tham số `redirect` trên URL có vẻ không dùng để làm gì, thử xóa send request:
+
+![img](75)
+
+-> Response lại trang `login.php` ban đầu, thử xóa endpoint `/login.php` để ra ngoài trang chủ:
+
+![img](76)
+
+**Password: ExecutionAfterRedirectIsBad**
+
+
+
 
 
 

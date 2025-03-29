@@ -29,3 +29,5 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 - [HTTP - Headers](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---headers)
 
 - [HTTP - POST](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---post)
+
+- [HTTP - Improper redirect]()
