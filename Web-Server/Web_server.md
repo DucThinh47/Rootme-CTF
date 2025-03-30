@@ -34,6 +34,8 @@
 
 - [Nginx - Root Location Misconfiguration]()
 
+- [API - Mass Assignment]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -521,6 +523,67 @@ Xem source page:
 ![img](100)
 
 Nội dung của trang không có ý nghĩa gì. 
+
+### API - Mass Assignment
+
+![img](101)
+
+Start the challenge:
+
+![img](102)
+
+Tạo tài khoản với api `/api/signup`:
+
+![img](103)
+
+Execute: 
+
+![img](104)
+
+Login vào tài khoản:
+
+![img](105)
+
+![img](106)
+
+Thử execute GET `/api/user`:
+
+![img](107)
+
+Thử sử dụng PATCH request thay đổi `status` thành `admin`:
+
+![img](108)
+
+-> Method không được phép, chỉ cho phép `PUT`, `OPTIONS`, `HEAD`, `GET`. Thử thay đổi thành `PUT`:
+
+![img](109)
+
+Thông báo update thành công, gọi lại api `GET /api/user` để xác nhận:
+
+![img](110)
+
+-> Thành công update status thành `admin`. 
+
+Gọi api `GET /api/flag`:
+
+![img](111)
+
+![img](112)
+
+**Password: RM{4lw4yS_ch3ck_0pt10ns_m3th0d}**
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

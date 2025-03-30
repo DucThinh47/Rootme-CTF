@@ -39,3 +39,5 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 - [Nginx - Alias Misconfiguration](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#nginx---alias-misconfiguration)
 
 - [Nginx - Root Location Misconfiguration]()
+
+- [API - Mass Assignment]()
