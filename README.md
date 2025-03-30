@@ -40,4 +40,4 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 
 - [Nginx - Root Location Misconfiguration]()
 
-- [API - Mass Assignment]()
+- [API - Mass Assignment](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#api---mass-assignment)

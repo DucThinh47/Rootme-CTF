@@ -34,7 +34,7 @@
 
 - [Nginx - Root Location Misconfiguration]()
 
-- [API - Mass Assignment]()
+- [API - Mass Assignment](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#api---mass-assignment)
 
 ### HTML - Source code
 
@@ -526,49 +526,49 @@ Nội dung của trang không có ý nghĩa gì.
 
 ### API - Mass Assignment
 
-![img](101)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image101.png?raw=true)
 
 Start the challenge:
 
-![img](102)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image102.png?raw=true)
 
 Tạo tài khoản với api `/api/signup`:
 
-![img](103)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image103.png?raw=true)
 
 Execute: 
 
-![img](104)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image104.png?raw=true)
 
 Login vào tài khoản:
 
-![img](105)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image105.png?raw=true)
 
-![img](106)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image106.png?raw=true)
 
 Thử execute GET `/api/user`:
 
-![img](107)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image107.png?raw=true)
 
 Thử sử dụng PATCH request thay đổi `status` thành `admin`:
 
-![img](108)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image108.png?raw=true)
 
 -> Method không được phép, chỉ cho phép `PUT`, `OPTIONS`, `HEAD`, `GET`. Thử thay đổi thành `PUT`:
 
-![img](109)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image109.png?raw=true)
 
 Thông báo update thành công, gọi lại api `GET /api/user` để xác nhận:
 
-![img](110)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image110.png?raw=true)
 
 -> Thành công update status thành `admin`. 
 
 Gọi api `GET /api/flag`:
 
-![img](111)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image111.png?raw=true)
 
-![img](112)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image112.png?raw=true)
 
 **Password: RM{4lw4yS_ch3ck_0pt10ns_m3th0d}**
 
