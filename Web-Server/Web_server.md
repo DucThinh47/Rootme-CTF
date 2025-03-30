@@ -26,6 +26,8 @@
 
 - [HTTP - Improper redirect](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---improper-redirect)
 
+- [HTTP - Verb tampering]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -409,6 +411,41 @@ Tham số `redirect` trên URL có vẻ không dùng để làm gì, thử xóa 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image76.png?raw=true)
 
 **Password: ExecutionAfterRedirectIsBad**
+
+### HTTP - Verb tampering
+
+![img](77)
+
+Start the challenge:
+
+![img](78)
+
+Thử nhập `username:admin` và `password:admin`:
+
+![img](79)
+
+Không có gì thay đổi. 
+
+Thử xem request và response: 
+
+![img](80)
+
+Tại sao lại là phương thức `GET` khi yêu cầu login, thử thay thành `POST` và thêm 2 tham số `username` và `password` rồi gửi request:
+
+![img](81)
+
+Vẫn không được, có thể không dùng được phương thức `POST` vì không biết rõ tên cũng như giá trị của tham số truyền vào body. Thử thay thành 1 phương thức bất kỳ, ví dụ `PATCH` và gửi request:
+
+![img](82)
+
+**Password: a23e$dme96d3saez$$prap**
+
+
+
+
+
+
+
 
 
 
