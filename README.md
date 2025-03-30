@@ -32,4 +32,4 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 
 - [HTTP - Improper redirect](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---improper-redirect)
 
-- [HTTP - Verb tampering]()
+- [HTTP - Verb tampering](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---verb-tampering)

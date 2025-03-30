@@ -26,7 +26,7 @@
 
 - [HTTP - Improper redirect](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---improper-redirect)
 
-- [HTTP - Verb tampering]()
+- [HTTP - Verb tampering](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---verb-tampering)
 
 ### HTML - Source code
 
@@ -414,29 +414,29 @@ Tham số `redirect` trên URL có vẻ không dùng để làm gì, thử xóa 
 
 ### HTTP - Verb tampering
 
-![img](77)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image77.png?raw=true)
 
 Start the challenge:
 
-![img](78)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image78.png?raw=true)
 
 Thử nhập `username:admin` và `password:admin`:
 
-![img](79)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image79.png?raw=true)
 
 Không có gì thay đổi. 
 
 Thử xem request và response: 
 
-![img](80)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image80.png?raw=true)
 
 Tại sao lại là phương thức `GET` khi yêu cầu login, thử thay thành `POST` và thêm 2 tham số `username` và `password` rồi gửi request:
 
-![img](81)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image81.png?raw=true)
 
 Vẫn không được, có thể không dùng được phương thức `POST` vì không biết rõ tên cũng như giá trị của tham số truyền vào body. Thử thay thành 1 phương thức bất kỳ, ví dụ `PATCH` và gửi request:
 
-![img](82)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image82.png?raw=true)
 
 **Password: a23e$dme96d3saez$$prap**
 
