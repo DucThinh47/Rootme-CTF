@@ -32,6 +32,8 @@
 
 - [Nginx - Alias Misconfiguration](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#nginx---alias-misconfiguration)
 
+- [Nginx - Root Location Misconfiguration]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -499,6 +501,28 @@ Click xem file `flag.txt`:
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image95.png?raw=true)
 
 **Password: RM{4lias_M1sC0nf_HuRtS!}**
+
+### Nginx - Root Location Misconfiguration
+
+![img](96)
+
+![img](97)
+
+Start the challenge:
+
+![img](98)
+
+Xem source page:
+
+![img](99)
+
+-> Tìm được root path `/etc/nginx/`. Thử truy cập:
+
+![img](100)
+
+Nội dung của trang không có ý nghĩa gì. 
+
+
 
 
 
