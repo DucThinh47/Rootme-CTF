@@ -35,3 +35,5 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 - [HTTP - Verb tampering](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---verb-tampering)
 
 - [Install files](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#install-files)
+
+- [Nginx - Alias Misconfiguration]()
