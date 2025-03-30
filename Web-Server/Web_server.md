@@ -28,7 +28,7 @@
 
 - [HTTP - Verb tampering](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---verb-tampering)
 
-- [Install files]()
+- [Install files](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#install-files)
 
 ### HTML - Source code
 
@@ -444,31 +444,31 @@ Vẫn không được, có thể không dùng được phương thức `POST` v�
 
 ### Install files
 
-![img](83)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image83.png?raw=true)
 
 Start the challenge:
 
-![img](84)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image84.png?raw=true)
 
 Website trống, không hiển thị gì. Xem source page: 
 
-![img](85)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image85.png?raw=true)
 
 Tìm được thông tin `/web-serveur/ch6/phpbb`, thử truy cập endpoint này: 
 
-![img](86)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image86.png?raw=true)
 
 Tiếp tục xem source page: 
 
-![img](87)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image87.png?raw=true)
 
 Không có thông tin gì. Thử dùng `dirsearch` để tìm xem có file ẩn không:
 
-![img](88)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image88.png?raw=true)
 
 Tìm được endpoint `/install`, thử truy cập: 
 
-![img](89)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image89.png?raw=true)
 
 **Password: karambar**
 
