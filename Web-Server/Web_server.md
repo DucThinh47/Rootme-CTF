@@ -28,6 +28,8 @@
 
 - [HTTP - Verb tampering](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---verb-tampering)
 
+- [Install files]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -439,6 +441,39 @@ Vẫn không được, có thể không dùng được phương thức `POST` v�
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image82.png?raw=true)
 
 **Password: a23e$dme96d3saez$$prap**
+
+### Install files
+
+![img](83)
+
+Start the challenge:
+
+![img](84)
+
+Website trống, không hiển thị gì. Xem source page: 
+
+![img](85)
+
+Tìm được thông tin `/web-serveur/ch6/phpbb`, thử truy cập endpoint này: 
+
+![img](86)
+
+Tiếp tục xem source page: 
+
+![img](87)
+
+Không có thông tin gì. Thử dùng `dirsearch` để tìm xem có file ẩn không:
+
+![img](88)
+
+Tìm được endpoint `/install`, thử truy cập: 
+
+![img](89)
+
+**Password: karambar**
+
+
+
 
 
 
