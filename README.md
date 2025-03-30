@@ -36,4 +36,4 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 
 - [Install files](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#install-files)
 
-- [Nginx - Alias Misconfiguration]()
+- [Nginx - Alias Misconfiguration](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#nginx---alias-misconfiguration)

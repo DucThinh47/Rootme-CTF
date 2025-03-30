@@ -30,7 +30,7 @@
 
 - [Install files](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#install-files)
 
-- [Nginx - Alias Misconfiguration]()
+- [Nginx - Alias Misconfiguration](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#nginx---alias-misconfiguration)
 
 ### HTML - Source code
 
@@ -476,27 +476,27 @@ Tìm được endpoint `/install`, thử truy cập:
 
 ### Nginx - Alias Misconfiguration
 
-![img](90)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image90.png?raw=true)
 
 Access the lab:
 
-![img](91)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image91.png?raw=true)
 
 Xem source page:
 
-![img](92)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image92.png?raw=true)
 
 Tìm được endpoint `/assets/`, thử truy cập: 
 
-![img](93)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image93.png?raw=true)
 
 Xuất hiện đường dẫn `../`. Thử truy cập `/assets../` (có thể xuất hiện lỗ hổng Path traversal): 
 
-![img](94)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image94.png?raw=true)
 
 Click xem file `flag.txt`:
 
-![img](95)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image95.png?raw=true)
 
 **Password: RM{4lias_M1sC0nf_HuRtS!}**
 
