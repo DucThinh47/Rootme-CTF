@@ -36,6 +36,8 @@
 
 - [API - Mass Assignment](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#api---mass-assignment)
 
+- [CRLF]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -572,8 +574,54 @@ Gọi api `GET /api/flag`:
 
 **Password: RM{4lw4yS_ch3ck_0pt10ns_m3th0d}**
 
+### CRLF
 
+![img](113)
 
+Start the challenge:
+
+![img](114)
+
+Xem source page:
+
+![img](115)
+
+Không tìm được gì. Thử nhập `username:admin` và `password:admin`:
+
+![img](116)
+
+-> Xuất hiện thêm một thông báo `admin failed to authenticate.`
+
+Thử nhập `username:abc` và `password:abc`:
+
+![img](117)
+
+-> Xuất hiện thêm một thông báo `abc failed to authenticate.`. Có vẻ website đang lấy ra `username` cộng với thông báo phía sau. Như vậy dựa vào log ban đầu của website, `admin` là 1 `username` hợp lệ. 
+
+Dựa vào tên thử thách: `CRLF`, ám chỉ đây là lỗ hổng `CRLF`, là một lỗ hổng bảo mật trong đó kẻ tấn công thao túng phản hồi HTTP bằng cách chèn các ký tự `Carriage Return (CR)` và `Line Feed (LF)` (gọi chung là CRLF) vào tiêu đề phản hồi. Các ký tự này đánh dấu phần cuối của tiêu đề và điểm bắt đầu của một dòng mới trong phản hồi HTTP.
+
+Bằng cách `chèn một chuỗi CRLF`, kẻ tấn công có thể `chia phản hồi thành hai phần`, kiểm soát hiệu quả cấu trúc của phản hồi HTTP. Điều này có thể dẫn đến các vấn đề bảo mật khác nhau, chẳng hạn như:
+
+- Cross-Site Scripting (XSS): Chèn các tập lệnh độc hại vào phản hồi thứ hai.
+- Nhiễm độc bộ nhớ cache: Buộc nội dung không chính xác được lưu trữ trong bộ nhớ cache.
+- Thao tác tiêu đề: Thay đổi tiêu đề để đánh lừa người dùng hoặc hệ thống
+
+Như vậy thử chèn payload vào `username`, dựa vào log ban đầu, cần chèn payload như nào để website in ra log như sau:
+
+    admin authenticated.
+    guest failed to authenticate.
+
+Thay đổi request thành:
+
+![img](118)
+
+Trong đó `%0d%0a` là `\r\n`. Gửi request này:
+
+![img](119)
+
+Như vậy việc buộc website in ra log `admin authenticated.` đã lấy dược password.
+
+**Password: rFSP&G0p&5uAg1%**
 
 
 
