@@ -36,7 +36,7 @@
 
 - [API - Mass Assignment](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#api---mass-assignment)
 
-- [CRLF]()
+- [CRLF](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#crlf)
 
 ### HTML - Source code
 
@@ -576,25 +576,25 @@ Gọi api `GET /api/flag`:
 
 ### CRLF
 
-![img](113)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image113.png?raw=true)
 
 Start the challenge:
 
-![img](114)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image114.png?raw=true)
 
 Xem source page:
 
-![img](115)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image115.png?raw=true)
 
 Không tìm được gì. Thử nhập `username:admin` và `password:admin`:
 
-![img](116)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image116.png?raw=true)
 
 -> Xuất hiện thêm một thông báo `admin failed to authenticate.`
 
 Thử nhập `username:abc` và `password:abc`:
 
-![img](117)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image117.png?raw=true)
 
 -> Xuất hiện thêm một thông báo `abc failed to authenticate.`. Có vẻ website đang lấy ra `username` cộng với thông báo phía sau. Như vậy dựa vào log ban đầu của website, `admin` là 1 `username` hợp lệ. 
 
@@ -613,11 +613,11 @@ Như vậy thử chèn payload vào `username`, dựa vào log ban đầu, cần
 
 Thay đổi request thành:
 
-![img](118)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image118.png?raw=true)
 
 Trong đó `%0d%0a` là `\r\n`. Gửi request này:
 
-![img](119)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image119.png?raw=true)
 
 Như vậy việc buộc website in ra log `admin authenticated.` đã lấy dược password.
 
