@@ -38,6 +38,8 @@
 
 - [CRLF](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#crlf)
 
+- [File upload - Double extensions]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -622,6 +624,58 @@ Trong đó `%0d%0a` là `\r\n`. Gửi request này:
 Như vậy việc buộc website in ra log `admin authenticated.` đã lấy dược password.
 
 **Password: rFSP&G0p&5uAg1%**
+
+### File upload - Double extensions
+
+![img](120)
+
+Start the challenge:
+
+![img](121)
+
+Click vào upload:
+
+![img](122)
+
+![img](123)
+
+Thử upload 1 file `.jpeg`:
+
+![img](124)
+
+Request sẽ trông như sau:
+
+![img](125)
+
+Tạo 1 file `my_shell.php` có nội dung như sau:
+
+    <?php echo system($_GET['command']); ?>
+
+Thử upload file này:
+
+![img](126)
+
+Request sẽ trông như sau:
+
+![img](127)
+
+-> Website trả về thông báo `Wrong file extension !`. Nghĩa là file extension `.php` không được chấp nhận. Thử thay tên file thành `my_shell.php.jpg` và sửa lại `Content-Type` header thành `image/jpeg` và upload lại:
+
+![img](128)
+
+Gửi request này:
+
+![img](129)
+
+Upload thành công payload. Truy cập đường dẫn nơi lưu trữ file upload và chèn tham số `command` với giá trị là `cat ../../../.passwd` (vì theo mô tả file này nằm tại root location):
+
+![img](130)
+
+**Password: Gg9LRz-hWSxqqUKd77**
+
+
+
+
 
 
 

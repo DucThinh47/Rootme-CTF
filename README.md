@@ -43,3 +43,5 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 - [API - Mass Assignment](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#api---mass-assignment)
 
 - [CRLF](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#crlf)
+
+- [File upload - Double extensions]()
