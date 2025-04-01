@@ -42,7 +42,7 @@
 
 - [File upload - MIME type](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#file-upload---mime-type)
 
-- [Flask - Unsecure session]()
+- [Flask - Unsecure session](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#flask---unsecure-session)
 
 ### HTML - Source code
 
@@ -743,27 +743,27 @@ Xác nhận chèn payload thành công. Thay đổi giá trị tham số `comman
 
 ### Flask - Unsecure session
 
-![img](146)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image146.png?raw=true)
 
 Start the challenge:
 
-![img](147)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image147.png?raw=true)
 
 Request và response khi load trang web:
 
-![img](148)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image148.png?raw=true)
 
 Webserver trả về 1 session, thử decode với `jwt.io`: 
 
-![img](149)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image149.png?raw=true)
 
 Truy cập trang Admin:
 
-![img](150)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image150.png?raw=true)
 
 Request sẽ trông như sau:
 
-![img](151)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image151.png?raw=true)
 
 Như vậy, ý tưởng là có thể thay giá trị trong header của jwt thành để sinh jwt mới:
 
@@ -778,19 +778,19 @@ Sử dụng tool `flask-unsign` để brute-force tìm ra chữ ký hợp lệ, 
 
     flask-unsign --wordlist rockyou.txt --unsign --no-literal-eval --cookie 'eyJhZG1pbiI6ImZhbHNlIiwidXNlcm5hbWUiOiJndWVzdCJ9.Z-xybg.BHYr8gtgg5SNHzb-smjqMfVIxM0'
 
-![img](152)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image152.png?raw=true)
 
 Tìm ra chữ ký của jwt gốc là `s3cr3t`. Tiếp tục sử dụng `flask-unsign` để sinh jwt mới với header như trên và chữ ký vừa tìm được, dùng lệnh:
 
     flask-unsign --sign --cookie '{"admin": "true", "username" : "admin"}' --secret 's3cr3t'
 
-![img](153)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image153.png?raw=true)
 
 -> JWT mới: `eyJhZG1pbiI6InRydWUiLCJ1c2VybmFtZSI6ImFkbWluIn0.Z-x3MA.xeNloJaT-uLi5qKaJpG2n9Gipi4`
 
 Thay jwt này vào request và gửi:
 
-![img](154)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image154.png?raw=true)
 
 **Password: Fl4sK_mi5c0nfigur4ti0n**
 
