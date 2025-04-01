@@ -38,7 +38,7 @@
 
 - [CRLF](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#crlf)
 
-- [File upload - Double extensions]()
+- [File upload - Double extensions](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#file-upload---double-extensions)
 
 ### HTML - Source code
 
@@ -627,25 +627,25 @@ Như vậy việc buộc website in ra log `admin authenticated.` đã lấy dư
 
 ### File upload - Double extensions
 
-![img](120)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image120.png?raw=true)
 
 Start the challenge:
 
-![img](121)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image121.png?raw=true)
 
 Click vào upload:
 
-![img](122)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image122.png?raw=true)
 
-![img](123)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image123.png?raw=true)
 
 Thử upload 1 file `.jpeg`:
 
-![img](124)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image124.png?raw=true)
 
 Request sẽ trông như sau:
 
-![img](125)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image125.png?raw=true)
 
 Tạo 1 file `my_shell.php` có nội dung như sau:
 
@@ -653,23 +653,23 @@ Tạo 1 file `my_shell.php` có nội dung như sau:
 
 Thử upload file này:
 
-![img](126)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image126.png?raw=true)
 
 Request sẽ trông như sau:
 
-![img](127)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image127.png?raw=true)
 
 -> Website trả về thông báo `Wrong file extension !`. Nghĩa là file extension `.php` không được chấp nhận. Thử thay tên file thành `my_shell.php.jpg` và sửa lại `Content-Type` header thành `image/jpeg` và upload lại:
 
-![img](128)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image128.png?raw=true)
 
 Gửi request này:
 
-![img](129)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image129.png?raw=true)
 
 Upload thành công payload. Truy cập đường dẫn nơi lưu trữ file upload và chèn tham số `command` với giá trị là `cat ../../../.passwd` (vì theo mô tả file này nằm tại root location):
 
-![img](130)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image130.png?raw=true)
 
 **Password: Gg9LRz-hWSxqqUKd77**
 
