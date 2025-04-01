@@ -40,6 +40,8 @@
 
 - [File upload - Double extensions](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#file-upload---double-extensions)
 
+- [File upload - MIME type]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -672,6 +674,81 @@ Upload thành công payload. Truy cập đường dẫn nơi lưu trữ file upl
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image130.png?raw=true)
 
 **Password: Gg9LRz-hWSxqqUKd77-_q-6G8**
+
+### File upload - MIME type
+
+![img](131)
+
+Start the challenge: 
+
+![img](132)
+
+Click upload:
+
+![img](133)
+
+![img](134)
+
+Thử upload 1 file `.jpg`:
+
+![img](135)
+
+-> Upload thành công. Request sẽ trông như sau:
+
+![img](136)
+
+Tạo file `my_shell.php` có nội dung như sau: 
+
+    <?php echo system($_GET['command']); ?>
+
+Thử upload file `my_shell.php`:
+
+![img](137)
+
+-> Website trả về thông báo `Wrong file type!`. 
+
+Request sẽ trông như sau:
+
+![img](138)
+
+Thử thêm file extension `.jpg` vào sau tên file `my_shell.php` và gửi lại request:
+
+![img](139)
+
+-> Không upload được. Thử sửa lại tên file như ban đầu và sửa `Content-Type` header thành `image/jpeg` và gửi lại request:
+
+![img](140)
+
+-> File upload thành công. Nhưng chưa biết thư mục nào lưu trữ file tải lên. Thử dùng `dirsearch` tìm ra endpoint lưu trữ file upload:
+
+![img](141)
+
+Tìm được endpoint `/tmp` nhưng bị cấm truy cập. Click lại vào `upload` và chọn xem `my_shell`:
+
+![img](142)
+
+![img](143)
+
+Thêm tham số `command=whoami`:
+
+![img](144)
+
+Xác nhận chèn payload thành công. Thay đổi giá trị tham số `command` thành `cat ../../../.passwd` để đọc file từ root location:
+
+![img](145)
+
+**Password: a7n4nizpgQgnPERy89uanf6T4**
+
+
+
+
+
+
+
+
+
+
+
 
 
 
