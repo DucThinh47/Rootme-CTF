@@ -671,7 +671,7 @@ Upload thành công payload. Truy cập đường dẫn nơi lưu trữ file upl
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image130.png?raw=true)
 
-**Password: Gg9LRz-hWSxqqUKd77**
+**Password: Gg9LRz-hWSxqqUKd77-_q-6G8**
 
 
 
