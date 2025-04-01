@@ -40,7 +40,7 @@
 
 - [File upload - Double extensions](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#file-upload---double-extensions)
 
-- [File upload - MIME type]()
+- [File upload - MIME type](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#file-upload---mime-type)
 
 ### HTML - Source code
 
@@ -677,25 +677,25 @@ Upload thành công payload. Truy cập đường dẫn nơi lưu trữ file upl
 
 ### File upload - MIME type
 
-![img](131)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image131.png?raw=true)
 
 Start the challenge: 
 
-![img](132)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image132.png?raw=true)
 
 Click upload:
 
-![img](133)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image133.png?raw=true)
 
-![img](134)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image134.png?raw=true)
 
 Thử upload 1 file `.jpg`:
 
-![img](135)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image135.png?raw=true)
 
 -> Upload thành công. Request sẽ trông như sau:
 
-![img](136)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image136.png?raw=true)
 
 Tạo file `my_shell.php` có nội dung như sau: 
 
@@ -703,39 +703,39 @@ Tạo file `my_shell.php` có nội dung như sau:
 
 Thử upload file `my_shell.php`:
 
-![img](137)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image137.png?raw=true)
 
 -> Website trả về thông báo `Wrong file type!`. 
 
 Request sẽ trông như sau:
 
-![img](138)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image138.png?raw=true)
 
 Thử thêm file extension `.jpg` vào sau tên file `my_shell.php` và gửi lại request:
 
-![img](139)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image139.png?raw=true)
 
 -> Không upload được. Thử sửa lại tên file như ban đầu và sửa `Content-Type` header thành `image/jpeg` và gửi lại request:
 
-![img](140)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image140.png?raw=true)
 
 -> File upload thành công. Nhưng chưa biết thư mục nào lưu trữ file tải lên. Thử dùng `dirsearch` tìm ra endpoint lưu trữ file upload:
 
-![img](141)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image141.png?raw=true)
 
 Tìm được endpoint `/tmp` nhưng bị cấm truy cập. Click lại vào `upload` và chọn xem `my_shell`:
 
-![img](142)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image142.png?raw=true)
 
-![img](143)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image143.png?raw=true)
 
 Thêm tham số `command=whoami`:
 
-![img](144)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image144.png?raw=true)
 
 Xác nhận chèn payload thành công. Thay đổi giá trị tham số `command` thành `cat ../../../.passwd` để đọc file từ root location:
 
-![img](145)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image145.png?raw=true)
 
 **Password: a7n4nizpgQgnPERy89uanf6T4**
 

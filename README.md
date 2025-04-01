@@ -46,4 +46,4 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 
 - [File upload - Double extensions](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#file-upload---double-extensions)
 
-- [File upload - MIME type]()
+- [File upload - MIME type](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#file-upload---mime-type)
