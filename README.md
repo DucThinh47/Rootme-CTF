@@ -50,4 +50,4 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 
 - [Flask - Unsecure session](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#flask---unsecure-session)
 
-- [HTTP - Cookies]()
+- [HTTP - Cookies](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---cookies)

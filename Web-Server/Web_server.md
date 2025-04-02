@@ -44,7 +44,7 @@
 
 - [Flask - Unsecure session](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#flask---unsecure-session)
 
-- [HTTP - Cookies]()
+- [HTTP - Cookies](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---cookies)
 
 ### HTML - Source code
 
@@ -798,25 +798,25 @@ Thay jwt này vào request và gửi:
 
 ### HTTP - Cookies
 
-![img](155)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image155.png?raw=true)
 
 Start the challenge:
 
-![img](156)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image156.png?raw=true)
 
 Xem source page:
 
-![img](157)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image157.png?raw=true)
 
 Tìm được path `"?c=visiteur`, thử truy cập:
 
-![img](158)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image158.png?raw=true)
 
 -> "You need to be admin". 
 
 Kiểm tra cookie thì thấy 1 cookie có tên `ch7` đang có giá trị `visiteur`, thử thay thành `admin` và reload:
 
-![img](160)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image160.png?raw=true)
 
 **Password: ml-SYMPA**
 
