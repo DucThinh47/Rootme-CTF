@@ -46,6 +46,8 @@
 
 - [HTTP - Cookies](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---cookies)
 
+- [Insecure Code Management](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#insecure-code-management)
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -822,27 +824,27 @@ Kiểm tra cookie thì thấy 1 cookie có tên `ch7` đang có giá trị `visi
 
 ### Insecure Code Management
 
-![img](161)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image161.png?raw=true)
 
 Start the challenge: 
 
-![img](162)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image162.png?raw=true)
 
 Xem source page:
 
-![img](163)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image163.png?raw=true)
 
 Thử đăng nhập với `username:admin` và `password:admin`:
 
-![img](164)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image164.png?raw=true)
 
 Kiểm tra request:
 
-![img](165)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image165.png?raw=true)
 
 Tìm được session có giá trị `eyJhZG1pbiI6ImZhbHNlIiwidXNlcm5hbWUiOiJndWVzdCJ9.Z-xybg.BHYr8gtgg5SNHzb-smjqMfVIxM0`. Giải mã jwt này:
 
-![img](166)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image166.png?raw=true)
 
 Ý tưởng là có thể thay thế phần header thành dạng như sau:
 
@@ -855,47 +857,47 @@ Nhưng hiện tại chưa có chữ ký, trong jwt gốc có vẻ chữ ký khô
 
 Thử dùng `flask-unsign` tìm chữ ký hợp lệ:
 
-![img](167)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image167.png?raw=true)
 
 --> Chữ ký `s3cr3t`. Sử dụng chữ ký này để sinh jwt mới. Không được
 
 Thử `dirsearch` tìm xem có endpoint ẩn nào không:
 
-![img](168)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image168.png?raw=true)
 
 Website để lộ `.git`. Việc để lộ `.git` là rất nguy hiểm. Thử truy cập `.git`:
 
-![img](169)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image169.png?raw=true)
 
 Tải toàn bộ thư mục `.git` về sử dụng `wget`:
 
-![img](170)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image170.png?raw=true)
 
 Chỉ lấy được file `index.html`. Dùng lệnh khác để download:
 
     wget -r -np -R "index.html*" http://challenge01.root-me.org/web-serveur/ch61/.git/
 
-![img](171)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image171.png?raw=true)
 
 Tải được thư mục của challenge. Truy cập thư mục `.git`:
 
-![img](172)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image172.png?raw=true)
 
 Khi sử dụng `dirsearch`, tìm được file `config.php` nhưng khi truy cập lại không hiển thị nội dung gì:
 
-![img](173)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image173.png?raw=true)
 
 Có thể file đã bị xóa và đang commit ở một nhánh nào đó. Sử dụng `git checkout .` để khôi phục lại:
 
-![img](174)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image174.png?raw=true)
 
 Tìm được nội dung của file `config.php`, chứa mật khẩu của admin nhưng đã được băm. Dựa vào nội dung file `COMMIT_EDITMSG`:
 
-![img](175)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image175.png?raw=true)
 
 Có thể password được băm với thuật toán SHA-256. Thử decode:
 
-![img](176)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image176.png?raw=true)
 
 **Password: s3cureP@ssw0rd**
 
