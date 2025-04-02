@@ -820,6 +820,97 @@ Kiểm tra cookie thì thấy 1 cookie có tên `ch7` đang có giá trị `visi
 
 **Password: ml-SYMPA**
 
+### Insecure Code Management
+
+![img](161)
+
+Start the challenge: 
+
+![img](162)
+
+Xem source page:
+
+![img](163)
+
+Thử đăng nhập với `username:admin` và `password:admin`:
+
+![img](164)
+
+Kiểm tra request:
+
+![img](165)
+
+Tìm được session có giá trị `eyJhZG1pbiI6ImZhbHNlIiwidXNlcm5hbWUiOiJndWVzdCJ9.Z-xybg.BHYr8gtgg5SNHzb-smjqMfVIxM0`. Giải mã jwt này:
+
+![img](166)
+
+Ý tưởng là có thể thay thế phần header thành dạng như sau:
+
+    {
+    "admin": "true",
+    "username": "admin"
+    }
+{"admin": "true", "username": "admin"}
+Nhưng hiện tại chưa có chữ ký, trong jwt gốc có vẻ chữ ký không phải là 1 giá trị hợp lệ. 
+
+Thử dùng `flask-unsign` tìm chữ ký hợp lệ:
+
+![img](167)
+
+--> Chữ ký `s3cr3t`. Sử dụng chữ ký này để sinh jwt mới. Không được
+
+Thử `dirsearch` tìm xem có endpoint ẩn nào không:
+
+![img](168)
+
+Website để lộ `.git`. Việc để lộ `.git` là rất nguy hiểm. Thử truy cập `.git`:
+
+![img](169)
+
+Tải toàn bộ thư mục `.git` về sử dụng `wget`:
+
+![img](170)
+
+Chỉ lấy được file `index.html`. Dùng lệnh khác để download:
+
+    wget -r -np -R "index.html*" http://challenge01.root-me.org/web-serveur/ch61/.git/
+
+![img](171)
+
+Tải được thư mục của challenge. Truy cập thư mục `.git`:
+
+![img](172)
+
+Khi sử dụng `dirsearch`, tìm được file `config.php` nhưng khi truy cập lại không hiển thị nội dung gì:
+
+![img](173)
+
+Có thể file đã bị xóa và đang commit ở một nhánh nào đó. Sử dụng `git checkout .` để khôi phục lại:
+
+![img](174)
+
+Tìm được nội dung của file `config.php`, chứa mật khẩu của admin nhưng đã được băm. Dựa vào nội dung file `COMMIT_EDITMSG`:
+
+![img](175)
+
+Có thể password được băm với thuật toán SHA-256. Thử decode:
+
+![img](176)
+
+**Password: s3cureP@ssw0rd**
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
