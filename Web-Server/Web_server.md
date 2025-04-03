@@ -48,7 +48,7 @@
 
 - [Insecure Code Management](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#insecure-code-management)
 
-- [JWT - Introduction]()
+- [JWT - Introduction](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#jwt---introduction)
 
 ### HTML - Source code
 
@@ -905,27 +905,27 @@ Có thể password được băm với thuật toán SHA-256. Thử decode:
 
 ### JWT - Introduction
 
-![img](177)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image177.png?raw=true)
 
 Start the challenge:
 
-![img](178)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image178.png?raw=true)
 
 Xem source page:
 
-![img](179)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image179.png?raw=true)
 
 Thử truy cập `/index.php?guest`:
 
-![img](180)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image180.png?raw=true)
 
 Inspect trang này:
 
-![img](181)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image181.png?raw=true)
 
 Tìm được cookie có tên `jwt` có giá trị là `eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Imd1ZXN0In0.OnuZnYMdetcg7AWGV6WURn8CFSfas6AQej4V9M13nsk`. Thử decode jwt:
 
-![img](182)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image182.png?raw=true)
 
 Có thể thử thay thế payload thành: 
 
@@ -939,13 +939,13 @@ Có thể thử thay đổi jwt header, chuyển `algorithm` thành `none` để
 
 Giải mã và mã hóa lại từng thành phần trong jwt (không cần làm với key vì `algorithm` được set về `none`):
 
-![img](183)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image183.png?raw=true)
 
 -> JWT Token mới: `eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.`
 
-Thay vào website: 
+Thay vào website:
 
-![img](194)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image184.png?raw=true)
 
 **Password: S1gn4tuR3_v3r1f1c4t10N_1S_1MP0Rt4n7**
 
