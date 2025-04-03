@@ -48,6 +48,8 @@
 
 - [Insecure Code Management](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#insecure-code-management)
 
+- [JWT - Introduction]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -901,10 +903,51 @@ Có thể password được băm với thuật toán SHA-256. Thử decode:
 
 **Password: s3cureP@ssw0rd**
 
+### JWT - Introduction
 
+![img](177)
 
+Start the challenge:
 
+![img](178)
 
+Xem source page:
+
+![img](179)
+
+Thử truy cập `/index.php?guest`:
+
+![img](180)
+
+Inspect trang này:
+
+![img](181)
+
+Tìm được cookie có tên `jwt` có giá trị là `eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Imd1ZXN0In0.OnuZnYMdetcg7AWGV6WURn8CFSfas6AQej4V9M13nsk`. Thử decode jwt:
+
+![img](182)
+
+Có thể thử thay thế payload thành: 
+
+    {
+        username: "admin"
+    }
+
+Sử dụng `flask-unsign` để tìm ra chữ ký nhưng không tìm được vì chữ ký trong jwt gốc có vẻ là 1 chữ ký hợp lệ.
+
+Có thể thử thay đổi jwt header, chuyển `algorithm` thành `none` để vô hiệu hóa chữ ký:
+
+Giải mã và mã hóa lại từng thành phần trong jwt (không cần làm với key vì `algorithm` được set về `none`):
+
+![img](183)
+
+-> JWT Token mới: `eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.`
+
+Thay vào website: 
+
+![img](194)
+
+**Password: S1gn4tuR3_v3r1f1c4t10N_1S_1MP0Rt4n7**
 
 
 
