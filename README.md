@@ -55,3 +55,5 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 - [Insecure Code Management](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#insecure-code-management)
 
 - [JWT - Introduction](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#jwt---introduction)
+
+- [XSS - Server Side]()

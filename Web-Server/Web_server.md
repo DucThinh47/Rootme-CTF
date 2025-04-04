@@ -50,6 +50,8 @@
 
 - [JWT - Introduction](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#jwt---introduction)
 
+- [XSS - Server Side]()
+
 ### HTML - Source code
 
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image.png?raw=true)
@@ -948,6 +950,70 @@ Thay vào website:
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image184.png?raw=true)
 
 **Password: S1gn4tuR3_v3r1f1c4t10N_1S_1MP0Rt4n7**
+
+### XSS - Server Side
+
+![img](185)
+
+Start the challenge:
+
+![img](186)
+
+Thử nhập 1 payload đơn giản vào và thử click `Generate`:
+
+![img](187)
+
+-> 1 file pdf được tự động tải xuống, nội dung của file như sau:
+
+![img](188)
+
+-> Chức năng của website có thể là tạo file pdf tự động, chuyển văn bản nhập vào thành file pdf.
+
+Thử click `Sign up` và đăng ký 1 tài khoản có `username:user1` và `password:user1`:
+
+![img](189)
+
+`Log in` vào tài khoản này:
+
+![img](191)
+
+Thử nhập lại payload ban đầu và xem file pdf xuất ra có gì khác không:
+
+![img](192)
+
+Xuất hiện `first name` và `last name` đã nhập khi `sign up`. Thử khai thác ô nhập `first name` và `last name` này. 
+
+`Log out` và `sign up` 1 tài khoản mới, lần này thử chèn 1 thẻ `<img/>` vào trường `first name`:
+
+![img](193)
+
+`Generate` file pdf mới và xem kết quả:
+
+![img](194)
+
+-> Có thể chèn hình ảnh từ website khác vào pdf. 
+
+Theo mô tả thử thách, cần xem được nội dung file `/flag.txt`. Thử xem nội dung file trực tiếp từ website xem có thể truy cập không:
+
+![img](195)
+
+Thử tạo một người dùng mới với `first name` là:
+
+    <iframe src=file:///flag.txt></iframe>
+
+Sử dụng `<iframe>` để nhúng nội dung từ trang web khác, `src=file:///flag.txt` sẽ nhúng file `flag.txt` từ server cục bộ. Dùng đúng cú pháp `file:///` để đảm bảo server hiểu chính xác muốn truy cập file hệ thống, đây là cú pháp chuẩn theo `RFC 8089` cho truy cập file local.
+
+![img](196)
+
+Generate file pdf mới:
+
+![img](197)
+
+**Password: s3rv3r_s1d3_xss_1s_w4y_m0r3_fun**
+
+
+
+
 
 
 
