@@ -50,7 +50,7 @@
 
 - [JWT - Introduction](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#jwt---introduction)
 
-- [XSS - Server Side]()
+- [XSS - Server Side](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#xss---server-side)
 
 ### HTML - Source code
 
@@ -953,49 +953,49 @@ Thay vào website:
 
 ### XSS - Server Side
 
-![img](185)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image185.png?raw=true)
 
 Start the challenge:
 
-![img](186)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image186.png?raw=true)
 
 Thử nhập 1 payload đơn giản vào và thử click `Generate`:
 
-![img](187)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image187.png?raw=true)
 
 -> 1 file pdf được tự động tải xuống, nội dung của file như sau:
 
-![img](188)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image188.png?raw=true)
 
 -> Chức năng của website có thể là tạo file pdf tự động, chuyển văn bản nhập vào thành file pdf.
 
 Thử click `Sign up` và đăng ký 1 tài khoản có `username:user1` và `password:user1`:
 
-![img](189)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image189.png?raw=true)
 
 `Log in` vào tài khoản này:
 
-![img](191)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image191.png?raw=true)
 
 Thử nhập lại payload ban đầu và xem file pdf xuất ra có gì khác không:
 
-![img](192)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image192.png?raw=true)
 
 Xuất hiện `first name` và `last name` đã nhập khi `sign up`. Thử khai thác ô nhập `first name` và `last name` này. 
 
 `Log out` và `sign up` 1 tài khoản mới, lần này thử chèn 1 thẻ `<img/>` vào trường `first name`:
 
-![img](193)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image193.png?raw=true)
 
 `Generate` file pdf mới và xem kết quả:
 
-![img](194)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image194.png?raw=true)
 
 -> Có thể chèn hình ảnh từ website khác vào pdf. 
 
 Theo mô tả thử thách, cần xem được nội dung file `/flag.txt`. Thử xem nội dung file trực tiếp từ website xem có thể truy cập không:
 
-![img](195)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image195.png?raw=true)
 
 Thử tạo một người dùng mới với `first name` là:
 
@@ -1003,11 +1003,11 @@ Thử tạo một người dùng mới với `first name` là:
 
 Sử dụng `<iframe>` để nhúng nội dung từ trang web khác, `src=file:///flag.txt` sẽ nhúng file `flag.txt` từ server cục bộ. Dùng đúng cú pháp `file:///` để đảm bảo server hiểu chính xác muốn truy cập file hệ thống, đây là cú pháp chuẩn theo `RFC 8089` cho truy cập file local.
 
-![img](196)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image196.png?raw=true)
 
 Generate file pdf mới:
 
-![img](197)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image197.png?raw=true)
 
 **Password: s3rv3r_s1d3_xss_1s_w4y_m0r3_fun**
 
