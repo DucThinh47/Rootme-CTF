@@ -27,7 +27,7 @@
 - [Insecure Code Management](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#insecure-code-management)
 - [JWT - Introduction](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#jwt---introduction)
 - [XSS - Server Side](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#xss---server-side)
-- [Directory traversal]()
+- [Directory traversal](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#directory-traversal)
 
 ### HTML - Source code
 
@@ -990,25 +990,25 @@ Generate file pdf mới:
 
 ### Directory traversal
 
-![img](198)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image198.png?raw=true)
 
 Start the challenge:
 
-![img](199)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image199.png?raw=true)
 
 Dùng `dirsearch` tìm kiếm qua 1 lượt:
 
-![img](200)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image200.png?raw=true)
 
 Không tìm được gì. 
 
 Xem source page:
 
-![img](201)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image201.png?raw=true)
 
 Tìm được endpoint `/galerie/apps`, truy cập thử:
 
-![img](202)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image202.png?raw=true)
 
 Không được phép truy cập.
 
@@ -1022,33 +1022,33 @@ Ví dụ, nếu tham số `galerie` có thể nhận giá trị như `../` (dùn
 
 Thử thay đổi giá trị tham số `galerie` thành `../`:
 
-![img](205)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image205.png?raw=true)
 
 Tìm được thư mục `galerie` và file `ch15.php`, click chuột phải vào thư mục `galerie` và inspect:
 
-![img](206)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image206.png?raw=true)
 
 Tìm được nguồn là `src="/..//galerie"`:
 
 Thử thay giá trị tham số `galerie` thành `/..//galerie`:
 
-![img](207)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image207.png?raw=true)
 
 Tìm được thư mục có tên `86hwnX2r`, thử inspect:
 
-![img](208)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image208.png?raw=true)
 
 Tiếp tục thay đổi giá trị tham số `galerie` thành `/..//galerie/86hwnX2r`:
 
-![img](209)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image209.png?raw=true)
 
 Tìm được file `password.txt`:
 
-![img](210)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image210.png?raw=true)
 
 Truy cập xem nội dung file này: http://challenge01.root-me.org/web-serveur/ch15//galerie/86hwnX2r/password.txt
 
-![img](211)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image211.png?raw=true)
 
 **Password: kcb$!Bx@v4Gs9Ez**
 
