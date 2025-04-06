@@ -3,54 +3,31 @@
 ## Content
 
 - [HTML - Source code](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#html---source-code)
-
 - [HTTP - IP restriction bypass](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---ip-restriction-bypass)
-
 - [HTTP - Open redirect](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---open-redirect)
-
 - [HTTP - User-agent](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---user-agent)
-
 - [Weak password](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#weak-password)
-
 - [PHP - Command injection](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#php---command-injection)
-
 - [API - Broken Access](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#api---broken-access)
-
 - [Backup file](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#backup-file)
-
 - [HTTP - Directory indexing](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---directory-indexing)
-
 - [HTTP - Headers](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---headers)
-
 - [HTTP - POST](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---post)
-
 - [HTTP - Improper redirect](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---improper-redirect)
-
 - [HTTP - Verb tampering](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---verb-tampering)
-
 - [Install files](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#install-files)
-
 - [Nginx - Alias Misconfiguration](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#nginx---alias-misconfiguration)
-
 - [Nginx - Root Location Misconfiguration]()
-
 - [API - Mass Assignment](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#api---mass-assignment)
-
 - [CRLF](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#crlf)
-
 - [File upload - Double extensions](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#file-upload---double-extensions)
-
 - [File upload - MIME type](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#file-upload---mime-type)
-
 - [Flask - Unsecure session](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#flask---unsecure-session)
-
 - [HTTP - Cookies](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#http---cookies)
-
 - [Insecure Code Management](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#insecure-code-management)
-
 - [JWT - Introduction](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#jwt---introduction)
-
 - [XSS - Server Side](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#xss---server-side)
+- [Directory traversal]()
 
 ### HTML - Source code
 
@@ -1010,6 +987,78 @@ Generate file pdf mới:
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image197.png?raw=true)
 
 **Password: s3rv3r_s1d3_xss_1s_w4y_m0r3_fun**
+
+### Directory traversal
+
+![img](198)
+
+Start the challenge:
+
+![img](199)
+
+Dùng `dirsearch` tìm kiếm qua 1 lượt:
+
+![img](200)
+
+Không tìm được gì. 
+
+Xem source page:
+
+![img](201)
+
+Tìm được endpoint `/galerie/apps`, truy cập thử:
+
+![img](202)
+
+Không được phép truy cập.
+
+Để ý mỗi khi click vào 1 photo gallery bất kỳ, 1 tham số `galerie` sẽ xuất hiện trên URL:
+
+![img](204)
+
+Như tên thử thách: `Directory Traversal`, nghĩa là khi truyền tham số `galerie` vào URL mà không chỉ rõ giá trị cụ thể (như `galerie=categories`), máy chủ có thể xử lý tham số này để trỏ đến thư mục trên máy chủ. 
+
+Ví dụ, nếu tham số `galerie` có thể nhận giá trị như `../` (dùng để di chuyển lên thư mục cha trong hệ thống file), có thể điều khiển giá trị tham số này để truy cập các thư mục không được phép.
+
+Thử thay đổi giá trị tham số `galerie` thành `../`:
+
+![img](205)
+
+Tìm được thư mục `galerie` và file `ch15.php`, click chuột phải vào thư mục `galerie` và inspect:
+
+![img](206)
+
+Tìm được nguồn là `src="/..//galerie"`:
+
+Thử thay giá trị tham số `galerie` thành `/..//galerie`:
+
+![img](207)
+
+Tìm được thư mục có tên `86hwnX2r`, thử inspect:
+
+![img](208)
+
+Tiếp tục thay đổi giá trị tham số `galerie` thành `/..//galerie/86hwnX2r`:
+
+![img](209)
+
+Tìm được file `password.txt`:
+
+![img](210)
+
+Truy cập xem nội dung file này: http://challenge01.root-me.org/web-serveur/ch15//galerie/86hwnX2r/password.txt
+
+![img](211)
+
+**Password: kcb$!Bx@v4Gs9Ez**
+
+
+
+
+
+
+
+
 
 
 
