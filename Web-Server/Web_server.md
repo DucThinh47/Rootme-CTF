@@ -28,6 +28,7 @@
 - [JWT - Introduction](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#jwt---introduction)
 - [XSS - Server Side](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#xss---server-side)
 - [Directory traversal](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#directory-traversal)
+- [File upload - Null byte]()
 
 ### HTML - Source code
 
@@ -1052,9 +1053,56 @@ Truy cập xem nội dung file này: http://challenge01.root-me.org/web-serveur/
 
 **Password: kcb$!Bx@v4Gs9Ez**
 
+### File upload - Null byte
 
+![img](212)
 
+Start the challenge:
 
+![img](213)
+
+Như tên thử thách, click vào upload:
+
+![img](214)
+
+![img](215)
+
+Thử upload 1 file ảnh `.jpg`:
+
+![img](216)
+
+-> Upload thành công. Request sẽ trông như sau:
+
+![img](217)
+
+Tạo 1 payload `.php` có nội dung như sau:
+
+    <?php echo system($_GET['command']); ?>
+
+Thử upload file `.php` này:
+
+![img](218)
+
+-> Message error: "Wrong file type!" Request trông như sau:
+
+![img](219)
+
+Thử thêm `.jpg` vào file extension và đổi `Content-Type` header thành `image/jpeg` và gửi lại request:
+
+![img](220)
+
+-> Message error: "Wrong file name!". Có vẻ bộ lọc đã lọc cả file extension. Thử chèn NULL BYTE `%00` 
+vào tên file và gửi lại request:
+
+![img](221)
+
+-> Upload thành công, website có check file extension nhưng khi đọc đến kí tự null thì dừng lại. 
+
+Click vào file vừa upload:
+
+![img](222)
+
+**Password: YPNchi2NmTwygr2dgCCF**
 
 
 

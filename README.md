@@ -59,3 +59,5 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 - [XSS - Server Side](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#xss---server-side)
 
 - [Directory traversal](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#directory-traversal)
+
+- [File upload - Null byte]()
