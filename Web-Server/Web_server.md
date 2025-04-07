@@ -28,7 +28,7 @@
 - [JWT - Introduction](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#jwt---introduction)
 - [XSS - Server Side](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#xss---server-side)
 - [Directory traversal](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#directory-traversal)
-- [File upload - Null byte]()
+- [File upload - Null byte](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#file-upload---null-byte)
 
 ### HTML - Source code
 
@@ -1055,25 +1055,25 @@ Truy cập xem nội dung file này: http://challenge01.root-me.org/web-serveur/
 
 ### File upload - Null byte
 
-![img](212)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image212.png?raw=true)
 
 Start the challenge:
 
-![img](213)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image213.png?raw=true)
 
 Như tên thử thách, click vào upload:
 
-![img](214)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image214.png?raw=true)
 
-![img](215)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image215.png?raw=true)
 
 Thử upload 1 file ảnh `.jpg`:
 
-![img](216)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image216.png?raw=true)
 
 -> Upload thành công. Request sẽ trông như sau:
 
-![img](217)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image217.png?raw=true)
 
 Tạo 1 payload `.php` có nội dung như sau:
 
@@ -1081,26 +1081,26 @@ Tạo 1 payload `.php` có nội dung như sau:
 
 Thử upload file `.php` này:
 
-![img](218)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image218.png?raw=true)
 
 -> Message error: "Wrong file type!" Request trông như sau:
 
-![img](219)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image219.png?raw=true)
 
 Thử thêm `.jpg` vào file extension và đổi `Content-Type` header thành `image/jpeg` và gửi lại request:
 
-![img](220)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image220.png?raw=true)
 
 -> Message error: "Wrong file name!". Có vẻ bộ lọc đã lọc cả file extension. Thử chèn NULL BYTE `%00` 
 vào tên file và gửi lại request:
 
-![img](221)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image221.png?raw=true)
 
 -> Upload thành công, website có check file extension nhưng khi đọc đến kí tự null thì dừng lại. 
 
 Click vào file vừa upload:
 
-![img](222)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/images/image222.png?raw=true)
 
 **Password: YPNchi2NmTwygr2dgCCF**
 
