@@ -4,7 +4,7 @@
 
 - [HTML - disabled buttons](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#html---disabled-buttons)
 - [Javascript - Authentication](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---authentication)
-- [Javascript - Source]()
+- [Javascript - Source](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---source)
 
 ### HTML - disabled buttons
 
@@ -50,21 +50,21 @@ Tìm được `username=4dm1n` và `password=sh.org`, đăng nhập:
 
 ### Javascript - Source
 
-![img](10)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image10.png?raw=true)
 
 Start the challenge:
 
-![img](11)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image11.png?raw=true)
 
 Thử nhập một chuỗi ngẫu nhiên và click `OK`:
 
-![img](12)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image12.png?raw=true)
 
 Thông báo sai mật khẩu. 
 
 Xem source page:
 
-![img](13)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image13.png?raw=true)
 
 Tìm được password cho cả website và challenge là `123456azerty`
 
