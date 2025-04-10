@@ -3,7 +3,7 @@
 ## Content
 
 - [HTML - disabled buttons](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#html---disabled-buttons)
-- [Javascript - Authentication]()
+- [Javascript - Authentication](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---authentication)
 
 ### HTML - disabled buttons
 
@@ -25,25 +25,25 @@ Xem source page:
 
 ### Javascript - Authentication
 
-![img](4)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image4.png?raw=true)
 
 Start the challenge:
 
-![img](5)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image5.png?raw=true)
 
 Xem source page:
 
-![img](6)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image6.png?raw=true)
 
-![img](7)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image7.png?raw=true)
 
 Tìm được file `/login.js`, xem nội dung file này:
 
-![img](8)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image8.png?raw=true)
 
 Tìm được `username=4dm1n` và `password=sh.org`, đăng nhập:
 
-![img](9)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image9.png?raw=true)
 
 **Password: sh.org**
 
