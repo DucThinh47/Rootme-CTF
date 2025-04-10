@@ -5,6 +5,7 @@
 - [HTML - disabled buttons](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#html---disabled-buttons)
 - [Javascript - Authentication](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---authentication)
 - [Javascript - Source](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---source)
+- [Javascript - Authentication 2]()
 
 ### HTML - disabled buttons
 
@@ -69,6 +70,30 @@ Xem source page:
 Tìm được password cho cả website và challenge là `123456azerty`
 
 **Password: 123456azerty**
+
+### Javascript - Authentication 2
+
+![img](14)
+
+Start the challenge:
+
+![img](15)
+
+Xem source page:
+
+![img](16)
+
+Tìm được file `login.js`, thử xem nội dung file:
+
+![img](17)
+
+Dựa vào đoạn mã, có thể thấy `username` và `password` được so sánh với các phần tử trong mảng `TheLists`, biến `TheSplit` sẽ tách các phần tử trong mangr này khỏi dấu `:`, tương đương với `TheUsername=GODEN` và `ThePassword=HIDDEN`, nhập 2 giá trị này vào trang Login:
+
+![img](18)
+
+**Password: HIDDEN**
+
+
 
 
 
