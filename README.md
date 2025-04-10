@@ -66,3 +66,4 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 ### Web - Client
 
 - [HTML - disabled buttons](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#html---disabled-buttons)
+- [Javascript - Authentication]()
