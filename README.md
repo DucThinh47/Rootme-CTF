@@ -5,6 +5,7 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 ## Content
 
 - [Web - Server](https://github.com/DucThinh47/Rootme-CTF#web---server)
+- [Web - Client]()
 
 ### Web - Server
 
@@ -61,3 +62,7 @@ Thực hành các thử thách CTF và viết Writeups trên Rootme.
 - [Directory traversal](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#directory-traversal)
 
 - [File upload - Null byte](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Server/Web_server.md#file-upload---null-byte)
+
+### Web - Client
+
+- [HTML - disabled buttons]()
