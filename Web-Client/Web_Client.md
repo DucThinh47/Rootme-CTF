@@ -5,7 +5,7 @@
 - [HTML - disabled buttons](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#html---disabled-buttons)
 - [Javascript - Authentication](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---authentication)
 - [Javascript - Source](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---source)
-- [Javascript - Authentication 2]()
+- [Javascript - Authentication 2](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---authentication-2)
 
 ### HTML - disabled buttons
 
@@ -73,23 +73,23 @@ Tìm được password cho cả website và challenge là `123456azerty`
 
 ### Javascript - Authentication 2
 
-![img](14)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image14.png?raw=true)
 
 Start the challenge:
 
-![img](15)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image15.png?raw=true)
 
 Xem source page:
 
-![img](16)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image16.png?raw=true)
 
 Tìm được file `login.js`, thử xem nội dung file:
 
-![img](17)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image17.png?raw=true)
 
 Dựa vào đoạn mã, có thể thấy `username` và `password` được so sánh với các phần tử trong mảng `TheLists`, biến `TheSplit` sẽ tách các phần tử trong mangr này khỏi dấu `:`, tương đương với `TheUsername=GODEN` và `ThePassword=HIDDEN`, nhập 2 giá trị này vào trang Login:
 
-![img](18)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image18.png?raw=true)
 
 **Password: HIDDEN**
 
