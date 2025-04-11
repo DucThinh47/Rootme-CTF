@@ -6,7 +6,7 @@
 - [Javascript - Authentication](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---authentication)
 - [Javascript - Source](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---source)
 - [Javascript - Authentication 2](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---authentication-2)
-- [Javascript - Obfuscation 1]()
+- [Javascript - Obfuscation 1](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---obfuscation-1)
 
 ### HTML - disabled buttons
 
@@ -96,23 +96,23 @@ Dựa vào đoạn mã, có thể thấy `username` và `password` được so s
 
 ### Javascript - Obfuscation 1
 
-![img](19)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image19.png?raw=true)
 
 Start the challenge:
 
-![img](20)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image20.png?raw=true)
 
 Nhập 1 chuỗi bất kỳ và click `OK`:
 
-![img](21)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image21.png?raw=true)
 
 Thông báo sai mật khẩu. Click `OK`:
 
-![img](22)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image22.png?raw=true)
 
 Xem source page:
 
-![img](23)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image23.png?raw=true)
 
 Tìm được chuỗi pass có giá trị được mã hóa `%63%70%61%73%62%69%65%6e%64%75%72%70%61%73%73%77%6f%72%64`. 
 
