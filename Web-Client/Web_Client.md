@@ -7,7 +7,7 @@
 - [Javascript - Source](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---source)
 - [Javascript - Authentication 2](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---authentication-2)
 - [Javascript - Obfuscation 1](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---obfuscation-1)
-- [Javascript - Obfuscation 2]()
+- [Javascript - Obfuscation 2](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---obfuscation-2)
 
 ### HTML - disabled buttons
 
@@ -123,15 +123,15 @@ Giá trị này giống như đã được URL encode, sử dụng Cyberchef và
 
 ### Javascript - Obfuscation 2
 
-![img](24)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image24.png?raw=true)
 
 Start the challenge:
 
-![img](25)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image25.png?raw=true)
 
 Xem source page:
 
-![img](26)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image26.png?raw=true)
 
 Tìm được mã Javascript:
 
