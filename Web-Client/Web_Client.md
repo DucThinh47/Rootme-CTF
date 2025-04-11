@@ -6,6 +6,7 @@
 - [Javascript - Authentication](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---authentication)
 - [Javascript - Source](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---source)
 - [Javascript - Authentication 2](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---authentication-2)
+- [Javascript - Obfuscation 1]()
 
 ### HTML - disabled buttons
 
@@ -92,6 +93,39 @@ Dựa vào đoạn mã, có thể thấy `username` và `password` được so s
 ![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image18.png?raw=true)
 
 **Password: HIDDEN**
+
+### Javascript - Obfuscation 1
+
+![img](19)
+
+Start the challenge:
+
+![img](20)
+
+Nhập 1 chuỗi bất kỳ và click `OK`:
+
+![img](21)
+
+Thông báo sai mật khẩu. Click `OK`:
+
+![img](22)
+
+Xem source page:
+
+![img](23)
+
+Tìm được chuỗi pass có giá trị được mã hóa `%63%70%61%73%62%69%65%6e%64%75%72%70%61%73%73%77%6f%72%64`. 
+
+Giá trị này giống như đã được URL encode, sử dụng Cyberchef và tìm được bản gốc là `cpasbiendurpassword`
+
+**Password: cpasbiendurpassword**
+
+
+
+
+
+
+
 
 
 
