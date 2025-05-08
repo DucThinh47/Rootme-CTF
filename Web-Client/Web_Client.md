@@ -8,7 +8,7 @@
 - [Javascript - Authentication 2](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---authentication-2)
 - [Javascript - Obfuscation 1](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---obfuscation-1)
 - [Javascript - Obfuscation 2](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---obfuscation-2)
-- [Javascript - Native code]()
+- [Javascript - Native code](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---native-code)
 
 ### HTML - disabled buttons
 
@@ -201,15 +201,15 @@ Số 54 -> Ký tự: 6
 **Password: hDufjdki156**
 ### Javascript - Native code
 
-![img](27)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image27.png?raw=true)
 
 Start the challenge:
 
-![img](28)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image28.png?raw=true)
 
 Thử nhập 1 chuỗi bất kỳ:
 
-![img](29)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image29.png?raw=true)
 
 Xem source page:
 
@@ -228,7 +228,7 @@ Xem source page:
 
 Tìm được 1 đoạn mã JS có vẻ đã bị fuzz, thử truy cập https://www.dcode.fr/javascript-unobfuscator để giải mã nội dung:
 
-![img](30)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image30.png?raw=true)
 
 Kết quả thu được: 
 
