@@ -9,6 +9,7 @@
 - [Javascript - Obfuscation 1](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---obfuscation-1)
 - [Javascript - Obfuscation 2](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---obfuscation-2)
 - [Javascript - Native code](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---native-code)
+- [Javascript - Webpack]()
 
 ### HTML - disabled buttons
 
@@ -245,6 +246,62 @@ Sau khi format lại:
         }
     }
 **Password: toto123lol**
+### Javascript - Webpack
+
+![img](32)
+
+Start the challenge:
+
+![img](33)
+
+Xem source page:
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset=utf-8>
+        <meta name=viewport content="width=device-width,initial-scale=1">
+        <title>Javascript - Webpack</title>
+        <link href=./static/css/app.f213bed71a5d27ded35fdf00a1963840.css rel=stylesheet>
+    </head>
+    <body>
+        <link rel='stylesheet' property='stylesheet' id='s' type='text/css' href='/template/s.css' media='all' />
+        <iframe id='iframe' src='https://www.root-me.org/?page=externe_header'></iframe>
+        <div id=app></div>
+        <script type=text/javascript src=./static/js/manifest.2ae2e69a05c33dfc65f8.js></script>
+        <script type=text/javascript src=./static/js/vendor.458c9f5863b8f28e5570.js></script>
+        <script type=text/javascript src=./static/js/app.a92c5074dafac0cb6365.js></script>
+    </body>
+    </html>
+Tìm được 3 file khả nghi:
+- /static/css/app.f213bed71a5d27ded35fdf00a1963840.css
+- /static/js/manifest.2ae2e69a05c33dfc65f8.js
+- /static/js/vendor.458c9f5863b8f28e5570.js
+- /static/js/app.a92c5074dafac0cb6365.js
+
+Thử truy cập `/static/js/app.a92c5074dafac0cb6365.js`:
+
+![img](34)
+
+Tìm được 1 URL mapping tới 1 file .js khác ` sourceMappingURL=app.a92c5074dafac0cb6365.js.map`. Thử truy cập file này:
+
+![img](35)
+
+Xuất hiện yêu cầu tải file. Tải về và xem nội dung file: 
+
+![img](36)
+
+Tìm được flag!
+
+**Password: BecauseSourceMapsAreGreatForDebuggingButNotForProduction**
+
+
+
+
+
+
+
+
 
 
 
