@@ -9,7 +9,7 @@
 - [Javascript - Obfuscation 1](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---obfuscation-1)
 - [Javascript - Obfuscation 2](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---obfuscation-2)
 - [Javascript - Native code](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---native-code)
-- [Javascript - Webpack]()
+- [Javascript - Webpack](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/Web_Client.md#javascript---webpack)
 
 ### HTML - disabled buttons
 
@@ -248,11 +248,11 @@ Sau khi format lại:
 **Password: toto123lol**
 ### Javascript - Webpack
 
-![img](32)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image32.png?raw=true)
 
 Start the challenge:
 
-![img](33)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image33.png?raw=true)
 
 Xem source page:
 
@@ -281,15 +281,15 @@ Tìm được 3 file khả nghi:
 
 Thử truy cập `/static/js/app.a92c5074dafac0cb6365.js`:
 
-![img](34)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image34.png?raw=true)
 
 Tìm được 1 URL mapping tới 1 file .js khác ` sourceMappingURL=app.a92c5074dafac0cb6365.js.map`. Thử truy cập file này:
 
-![img](35)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image35.png?raw=true)
 
 Xuất hiện yêu cầu tải file. Tải về và xem nội dung file: 
 
-![img](36)
+![img](https://github.com/DucThinh47/Rootme-CTF/blob/main/Web-Client/images/image36.png?raw=true)
 
 Tìm được flag!
 
